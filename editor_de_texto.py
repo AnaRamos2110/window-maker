@@ -19,7 +19,7 @@ def abrir():
     window.title(f'---Editor de Texto--- {caminho}')
 
 """
-Resposta by: copilot-- ainda estou aprendendo sobre tkinter então peço ajuda pro chat sobre as funções e parâmetros pra entender melhor o que cada código faz no tkinter! obs: o legal de copiar é que ele joga tudo de volta formatado em MARKDOWN então já da pra estudar duas coisas de uma vez kkkk...
+Resposta- ainda estou aprendendo sobre tkinter então peço ajuda pro chat sobre as funções e parâmetros pra entender melhor o que cada código faz no tkinter! obs: o legal de copiar é que ele joga tudo de volta formatado em MARKDOWN então já da pra estudar duas coisas de uma vez kkkk...
 
 #filetypes é um parâmetro que define quais tipos de arquivos o diálogo de seleção de arquivos irá mostrar.
 
