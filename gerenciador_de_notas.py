@@ -17,7 +17,7 @@ PERMITIR AO USUÁRIO REMOVER E EDITAR NOTAS.
 #messagebox: usada para exibir mensagens, como alertas ou avisos.
 
 import tkinter as tk
-from tkinter import * 
+from tkinter import simpledialog, messagebox, Button
 
 #Função para adicionar uma nova nota
 #Essa função abre uma caixa de diálogo  pedindo ao usuário que insira uma nova nota.
@@ -26,7 +26,7 @@ from tkinter import *
 def add_note():
     note = simpledialog.askstring("Nota", "Digite sua nota: ") #Abre uma caixa de diálogo para digitar a nota
     if note: #Verifica se o usuário digitou alguma coisa
-        listbox.insert(tk, END, note) #Insere a nota ao final da listbox
+        listbox.insert(tk.END, note) #Insere a nota ao final da listbox
 
 #Função para deletar a nota selecionada
 #O usuário deve selecionar uma nota na lista. Se nenhuma nota for selecionada, um aviso aparecerá.
@@ -39,6 +39,7 @@ def delete_note():
     except:
         messagebox.showwarning("Aviso", "Nenhuma nota selecionada. ") #Exibe uma mensagem de aviso  se nada estiver selecionado
 
+   
 #Criação da janela principal da aplicação
 root = tk.Tk() #Inicializa a janela principal
 root.title("Gerenciador de notas ") #Define o título da janela principal
@@ -58,6 +59,10 @@ add_button.pack(pady=5) #Define o espaçamento vertical ao redor do botão
 #Quando clicado, ele chama a função delete_note
 delete_button = tk.Button(root, text="Remover nota?", command=delete_note, font='Ariual 14')
 delete_button.pack(pady=5)
+
+#criação do botão 'sair' para fechar a aplicação:
+add_button = tk.Button(root, text="Sair", command=root.destroy, font='Arial, 14')
+add_button.pack(pady=5)
 
 
 #Inicia o loop principal da interface gráfica, permitindo que a janela seja exibida e interativa
